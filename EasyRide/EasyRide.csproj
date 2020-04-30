@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B886D40-9E03-4551-9F46-DB2DB729F1AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EasyRide</RootNamespace>
+    <AssemblyName>EasyRide</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewDriver.Designer.cs">
+      <DependentUpon>AddNewDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTripForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTripForm.Designer.cs">
+      <DependentUpon>AddTripForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book.Designer.cs">
+      <DependentUpon>book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplainD.Designer.cs">
+      <DependentUpon>ComplainD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComplainR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplainR.Designer.cs">
+      <DependentUpon>ComplainR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+    <Compile Include="CS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSAsalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSAsalary.Designer.cs">
+      <DependentUpon>CSAsalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Service.Designer.cs">
+      <DependentUpon>Customer Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBManager.cs" />
+    <Compile Include="DriverComplaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverComplaint.Designer.cs">
+      <DependentUpon>DriverComplaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriversComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriversComplaints.Designer.cs">
+      <DependentUpon>DriversComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriverWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriverWelcome.Designer.cs">
+      <DependentUpon>DriverWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbox.Designer.cs">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mail.Designer.cs">
+      <DependentUpon>mail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerView.Designer.cs">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyTrips.Designer.cs">
+      <DependentUpon>MyTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyWallet.Designer.cs">
+      <DependentUpon>MyWallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewC.Designer.cs">
+      <DependentUpon>NewC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrvRiders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrvRiders.Designer.cs">
+      <DependentUpon>PrvRiders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrvTripDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrvTripDate.Designer.cs">
+      <DependentUpon>PrvTripDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Region_Income_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Region_Income_Report.Designer.cs">
+      <DependentUpon>Region_Income_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemovingTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovingTrip.Designer.cs">
+      <DependentUpon>RemovingTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiderInfo.Designer.cs">
+      <DependentUpon>RiderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RidersComplaints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RidersComplaints.Designer.cs">
+      <DependentUpon>RidersComplaints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RidersNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RidersNo.Designer.cs">
+      <DependentUpon>RidersNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="capacityPerR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>capacityPerR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUser.Designer.cs">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="TripDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TripDetails.Designer.cs">
+      <DependentUpon>TripDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDriverSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDriverSalary.Designer.cs">
+      <DependentUpon>UpdateDriverSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpRiders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpRiders.Designer.cs">
+      <DependentUpon>UpRiders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpTripDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpTripDate.Designer.cs">
+      <DependentUpon>UpTripDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTrips.Designer.cs">
+      <DependentUpon>ViewTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewDriver.resx">
+      <DependentUpon>AddNewDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTripForm.resx">
+      <DependentUpon>AddTripForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book.resx">
+      <DependentUpon>book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplainD.resx">
+      <DependentUpon>ComplainD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplainR.resx">
+      <DependentUpon>ComplainR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSAsalary.resx">
+      <DependentUpon>CSAsalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Service.resx">
+      <DependentUpon>Customer Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverComplaint.resx">
+      <DependentUpon>DriverComplaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriversComplaints.resx">
+      <DependentUpon>DriversComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriverWelcome.resx">
+      <DependentUpon>DriverWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbox.resx">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mail.resx">
+      <DependentUpon>mail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerView.resx">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyTrips.resx">
+      <DependentUpon>MyTrips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyWallet.resx">
+      <DependentUpon>MyWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewC.resx">
+      <DependentUpon>NewC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrvRiders.resx">
+      <DependentUpon>PrvRiders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrvTripDate.resx">
+      <DependentUpon>PrvTripDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Region_Income_Report.resx">
+      <DependentUpon>Region_Income_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemovingTrip.resx">
+      <DependentUpon>RemovingTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiderInfo.resx">
+      <DependentUpon>RiderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RidersComplaints.resx">
+      <DependentUpon>RidersComplaints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RidersNo.resx">
+      <DependentUpon>RidersNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="capacityPerR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>capacityPerR.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUser.resx">
+      <DependentUpon>SelectUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TripDetails.resx">
+      <DependentUpon>TripDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDriverSalary.resx">
+      <DependentUpon>UpdateDriverSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpRiders.resx">
+      <DependentUpon>UpRiders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpTripDate.resx">
+      <DependentUpon>UpTripDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTrips.resx">
+      <DependentUpon>ViewTrips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
